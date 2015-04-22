@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cod sede operativa:</strong>
+  <%= @sede_operativa.cod_sede_operativa %>
+</p>
+
+<p>
+  <strong>Sede operativa:</strong>
+  <%= @sede_operativa.sede_operativa %>
+</p>
+
+<%= link_to 'Edit', edit_sede_operativa_path(@sede_operativa) %> |
+<%= link_to 'Back', sede_operativas_path %>

@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  resources :usuarios
+  resources :locals
+
+  resources :sede_operativas
+
+  resources :usuario_locals
+
+  resources :rols
+
+  resources :capacitacion do
+    get 'login', on: :collection
+  end
+
+  resources :usuarios do
+    get 'login' , on: :collection
+  end
 
   
   # The priority is based upon order of creation: first created -> highest priority.

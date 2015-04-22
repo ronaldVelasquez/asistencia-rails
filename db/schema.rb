@@ -11,14 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422045952) do
+ActiveRecord::Schema.define(version: 20150422194358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "capacitacions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locals", force: true do |t|
+    t.integer  "cod_sede_operativa"
+    t.integer  "cod_local_sede"
+    t.string   "nombreLocal"
+    t.string   "direccion"
+    t.string   "refencia"
+    t.integer  "naula"
+    t.string   "estado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rols", force: true do |t|
+    t.string   "nombre_rol"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sede_operativas", force: true do |t|
+    t.integer  "cod_sede_operativa"
+    t.string   "sede_operativa"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuario_locals", force: true do |t|
+    t.integer  "cod_sede_operativa"
+    t.integer  "cod_local_sede"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usuarios", force: true do |t|
     t.string   "usuario"
     t.string   "clave"
+    t.string   "nombres_apellidos"
+    t.string   "estado"
+    t.integer  "id_rol"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

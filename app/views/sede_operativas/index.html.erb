@@ -1,0 +1,27 @@
+<h1>Listing sede_operativas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cod sede operativa</th>
+      <th>Sede operativa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sede_operativas.each do |sede_operativa| %>
+      <tr>
+        <td><%= sede_operativa.cod_sede_operativa %></td>
+        <td><%= sede_operativa.sede_operativa %></td>
+        <td><%= link_to 'Show', sede_operativa %></td>
+        <td><%= link_to 'Edit', edit_sede_operativa_path(sede_operativa) %></td>
+        <td><%= link_to 'Destroy', sede_operativa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sede operativa', new_sede_operativa_path %>

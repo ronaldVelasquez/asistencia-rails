@@ -1,0 +1,45 @@
+<%= form_for(@local) do |f| %>
+  <% if @local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@local.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+      <% @local.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cod_sede_operativa %><br>
+    <%= f.number_field :cod_sede_operativa %>
+  </div>
+  <div class="field">
+    <%= f.label :cod_local_sede %><br>
+    <%= f.number_field :cod_local_sede %>
+  </div>
+  <div class="field">
+    <%= f.label :nombreLocal %><br>
+    <%= f.text_field :nombreLocal %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :refencia %><br>
+    <%= f.text_field :refencia %>
+  </div>
+  <div class="field">
+    <%= f.label :naula %><br>
+    <%= f.number_field :naula %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

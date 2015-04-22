@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cod_sede_operativa: 1
+  sede_operativa: MyString
+
+two:
+  cod_sede_operativa: 1
+  sede_operativa: MyString

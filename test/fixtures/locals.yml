@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cod_sede_operativa: 1
+  cod_local_sede: 1
+  nombreLocal: MyString
+  direccion: MyString
+  refencia: MyString
+  naula: 1
+  estado: MyString
+
+two:
+  cod_sede_operativa: 1
+  cod_local_sede: 1
+  nombreLocal: MyString
+  direccion: MyString
+  refencia: MyString
+  naula: 1
+  estado: MyString

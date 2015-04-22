@@ -1,6 +1,6 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: [:show, :edit, :update, :destroy]
-
+  respond_to :json
   # GET /usuarios
   # GET /usuarios.json
   def index
@@ -61,6 +61,12 @@ class UsuariosController < ApplicationController
     end
   end
 
+  def login
+    password = params[:password]
+    @usuario = Usuario.where(clave: password)
+    render json: @usuario
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_usuario
@@ -69,6 +75,6 @@ class UsuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_params
-      params.require(:usuario).permit(:usuario, :clave)
+      params.require(:usuario).permit(:usuario, :clave, :nombres_apellidos, :estado)
     end
 end

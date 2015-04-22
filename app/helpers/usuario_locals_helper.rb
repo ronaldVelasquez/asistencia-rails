@@ -1,0 +1,2 @@
+module UsuarioLocalsHelper
+end

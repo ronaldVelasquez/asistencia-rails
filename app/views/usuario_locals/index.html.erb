@@ -1,0 +1,23 @@
+<h1>Listing usuario_locals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuario_locals.each do |usuario_local| %>
+      <tr>
+        <td><%= link_to 'Show', usuario_local %></td>
+        <td><%= link_to 'Edit', edit_usuario_local_path(usuario_local) %></td>
+        <td><%= link_to 'Destroy', usuario_local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usuario local', new_usuario_local_path %>
