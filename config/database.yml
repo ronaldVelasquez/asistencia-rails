@@ -24,7 +24,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DATABASE_NAME'] %>
+  database: asistencia_development
   host: localhost
   pool: 5
   username: <%= ENV['DATABASE_USERNAME'] %>
@@ -33,7 +33,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DATABASE_NAME_TEST'] %>
+  database: asistencia_test
   host: localhost
   pool: 5
   username: <%= ENV['DATABASE_USERNAME'] %>
