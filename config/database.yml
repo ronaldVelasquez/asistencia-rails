@@ -93,6 +93,7 @@ test:
 #
 production:
   url: <%= ENV['DATABASE_URL'] %>
+  encoding: unicode
   #database: asistencia_production
   #username: asistencia
   #password: <%= ENV['ASISTENCIA_DATABASE_PASSWORD'] %>
