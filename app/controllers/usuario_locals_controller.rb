@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class UsuarioLocalsController < ApplicationController
   before_action :set_usuario_local, only: [:show, :edit, :update, :destroy]
 

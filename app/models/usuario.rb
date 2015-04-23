@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Usuario < ActiveRecord::Base
   def self.check_password(password)
     usuario = Usuario.find_by(clave: password)

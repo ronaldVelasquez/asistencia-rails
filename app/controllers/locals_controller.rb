@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class LocalsController < ApplicationController
   before_action :set_local, only: [:show, :edit, :update, :destroy]
 

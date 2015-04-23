@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SedeOperativasController < ApplicationController
   before_action :set_sede_operativa, only: [:show, :edit, :update, :destroy]
 

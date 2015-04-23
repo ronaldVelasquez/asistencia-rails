@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Capacitacion < ActiveRecord::Base
 
   def self.ubigeo(usuario_local)
