@@ -27,8 +27,9 @@ development:
   database: asistencia_development
   host: localhost
   pool: 5
-  username: postgres
-  password: postgres
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
 
 test:
   adapter: postgresql
@@ -36,8 +37,9 @@ test:
   database: asistencia_test
   host: localhost
   pool: 5
-  username: postgres
-  password: postgres
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

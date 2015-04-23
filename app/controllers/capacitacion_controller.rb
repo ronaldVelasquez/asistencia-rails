@@ -8,7 +8,7 @@ class CapacitacionController < ApplicationController
     else
       usuario_local = UsuarioLocal.find_by(id: usuario.id)
       json = Capacitacion.ubigeo(usuario_local) unless usuario_local.nil?
-      render json: json
+      render json: json 
     end
   end
 end

@@ -9,5 +9,6 @@ class Capacitacion < ActiveRecord::Base
     local_estado = local.estado
     local_nro_aula = local.naula
     json = { usuario: usuario, sede_operativa: sede, local: local_nombre, direccion: local_direccion, aulas: local_nro_aula, estado: local_estado }
+    json.to_json
   end
 end
