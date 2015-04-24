@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vercod: 1
+  v_padron: 1
+  v_sistem_integer: MyString
+  f_registro: 2015-04-24 09:27:07
+  id_even: 1
+  des_ini: 2015-04-24 09:27:07
+  des_fin: 2015-04-24 09:27:07
+  observa: MyString
+
+two:
+  vercod: 1
+  v_padron: 1
+  v_sistem_integer: MyString
+  f_registro: 2015-04-24 09:27:07
+  id_even: 1
+  des_ini: 2015-04-24 09:27:07
+  des_fin: 2015-04-24 09:27:07
+  observa: MyString

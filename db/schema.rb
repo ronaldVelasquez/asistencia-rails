@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422194358) do
+ActiveRecord::Schema.define(version: 20150424142707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,19 @@ ActiveRecord::Schema.define(version: 20150422194358) do
     t.string   "nombres_apellidos"
     t.string   "estado"
     t.integer  "id_rol"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "versions", force: true do |t|
+    t.integer  "vercod"
+    t.integer  "v_padron"
+    t.integer  "v_sistem"
+    t.datetime "f_registro"
+    t.integer  "id_even"
+    t.datetime "des_ini"
+    t.datetime "des_fin"
+    t.string   "observa"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

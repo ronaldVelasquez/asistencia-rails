@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :versions
+
   resources :locals
 
   resources :sede_operativas
@@ -8,8 +10,11 @@ Rails.application.routes.draw do
   resources :rols
 
   resources :capacitacion do
-    get 'login', on: :collection
+    post 'login', on: :collection
+    get 'versiones', on: :collection
+    get 'version_actual', on: :collection
   end
+
 
   resources :usuarios do
     get 'login' , on: :collection

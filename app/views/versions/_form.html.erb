@@ -1,0 +1,49 @@
+<%= form_for(@version) do |f| %>
+  <% if @version.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@version.errors.count, "error") %> prohibited this version from being saved:</h2>
+
+      <ul>
+      <% @version.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vercod %><br>
+    <%= f.number_field :vercod %>
+  </div>
+  <div class="field">
+    <%= f.label :v_padron %><br>
+    <%= f.number_field :v_padron %>
+  </div>
+  <div class="field">
+    <%= f.label :v_sistem_integer %><br>
+    <%= f.text_field :v_sistem_integer %>
+  </div>
+  <div class="field">
+    <%= f.label :f_registro %><br>
+    <%= f.datetime_select :f_registro %>
+  </div>
+  <div class="field">
+    <%= f.label :id_even %><br>
+    <%= f.number_field :id_even %>
+  </div>
+  <div class="field">
+    <%= f.label :des_ini %><br>
+    <%= f.datetime_select :des_ini %>
+  </div>
+  <div class="field">
+    <%= f.label :des_fin %><br>
+    <%= f.datetime_select :des_fin %>
+  </div>
+  <div class="field">
+    <%= f.label :observa %><br>
+    <%= f.text_field :observa %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
