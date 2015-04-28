@@ -7,7 +7,7 @@ class CapacitacionController < ApplicationController
   def login
   	clave = params[:password]
     usuario = Usuario.check_password(clave)
-    json = {}
+    json = ""
     unless (usuario.nil? || usuario.blank?)
       usuario_local = UsuarioLocal.find_by(id: usuario.id)
       json = Capacitacion.ubigeo(usuario_local) unless usuario_local.nil?
